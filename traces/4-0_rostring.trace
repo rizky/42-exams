@@ -1,0 +1,101 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e2r7p22.42.fr
+Darwin 15.6.0 x86_64
+$> date
+Mon Nov 20 20:22:26 CET 2017
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 8.0.0 (clang-800.0.42.1)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 8.0.0 (clang-800.0.42.1)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2017/c-exam-alone-in-the-dark-beginner/practice-exam_20171120/rnugroho
+
+= Git history ==================================================================
+$> git -C /var/folders/qn/_7p5h3wd28q6kyf265vl0p9h0000gq/T/tmpLfZl9V/user log --pretty='%H - %an, %ad : %s'
+b4c53c09234ced599da2fe2be379dd720d38643b - rizkyario, Mon Nov 20 20:22:15 2017 +0100 : added ex4
+0eb63d11ce8cf133a2b35518b566a0c9ae0bcbbd - rizkyario, Mon Nov 20 19:33:21 2017 +0100 : Added ex03
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/qn/_7p5h3wd28q6kyf265vl0p9h0000gq/T/tmpLfZl9V/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  513 Nov 20 20:22 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 20 20:22 hidenp
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 20 20:22 rostring
+
+/var/folders/qn/_7p5h3wd28q6kyf265vl0p9h0000gq/T/tmpLfZl9V/user/hidenp:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1359 Nov 20 20:22 hidenp.c
+
+/var/folders/qn/_7p5h3wd28q6kyf265vl0p9h0000gq/T/tmpLfZl9V/user/rostring:
+total 8
+-rw-r--r--  1 deepthought  deepthought  2557 Nov 20 20:22 rostring.c
+ 
+= rostring =====================================================================
+$> clang -Wextra -Wall -Werror rostring.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./ueuajt6pcyhl1n524jsdwl87 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./d5bikd3m1ma988q1vdx03bxe 
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./eyosogpryntjcoyh2wb6sul7 "salut" "a" "tous" "tout" "le" "monde"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./14t0evh8y2dgzwmqt5uotfn0 "UAdLNcpiCq6zut"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./hm6hei8rnynus7qkz3eerlwg "DpWk7LKSCqzPEn"
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./bp4qcx0ol9rwo5ssss4qk32q "5GYIh"
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./ewvl8sc61l8oio65lk07owxa "DNAz B9yzSHg7CO KGlRYVIvfF 97PCjMlHW8Xy zVm wzIQumV"
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./ezek7p3g18r5c56pj7e5n4ze "gvPTS ZjITf jZte8D6 CWIQ9rFqjuVKx0b tb7wR KwGdiH6okIE YPJ1CqFMnm6Hp u6Bcq"
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./uozr0awlvuzmwjgex9b9ic5g "PbOn L2oe3TiEv da086I5csO7xLj bkxCg8iUAypHQ9Mt zPOTAKD Ffu3vk"
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+= Test 10 ==================================================
+$> ./0a0d1181vmdwogh49clvqj86 ".ugFeI7Ns8k69lz>Aw61IY80:tlCNevWbyXp/NUf71hZu-xfkFR9Ib4myedDjr;nrxfAz.CEX.saSycAJFtuMN JKoEcSnu9bg)tQL9l5dx2grq?"
+$> diff -U 3 user_output_test10 test10.output | cat -e
+
+Diff OK :D
+= Test 11 ==================================================
+$> ./k4ez4ruh29mrr69tcgh1y6hz " ly2zNGHo?mxYFUDJalzci8   	"
+Command './k4ez4ruh29mrr69tcgh1y6hz " ly2zNGHo?mxYFUDJalzci8   	"' got killed by a Segmentation fault (Signal -11)
+Grade: 0
+
+= Final grade: 0 ===============================================================

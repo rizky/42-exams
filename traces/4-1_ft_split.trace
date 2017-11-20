@@ -1,0 +1,72 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e2r7p22.42.fr
+Darwin 15.6.0 x86_64
+$> date
+Mon Nov 20 20:27:33 CET 2017
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 8.0.0 (clang-800.0.42.1)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 8.0.0 (clang-800.0.42.1)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2017/c-exam-alone-in-the-dark-beginner/practice-exam_20171120/rnugroho
+
+= Git history ==================================================================
+$> git -C /var/folders/qn/_7p5h3wd28q6kyf265vl0p9h0000gq/T/tmpoKcz0T/user log --pretty='%H - %an, %ad : %s'
+b0b15694d34a4ec1aeb55e76d428b9e440fdaa51 - rizkyario, Mon Nov 20 20:27:20 2017 +0100 : added x4
+b4c53c09234ced599da2fe2be379dd720d38643b - rizkyario, Mon Nov 20 20:22:15 2017 +0100 : added ex4
+0eb63d11ce8cf133a2b35518b566a0c9ae0bcbbd - rizkyario, Mon Nov 20 19:33:21 2017 +0100 : Added ex03
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/qn/_7p5h3wd28q6kyf265vl0p9h0000gq/T/tmpoKcz0T/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  771 Nov 20 20:27 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 20 20:27 ft_split
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 20 20:27 hidenp
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 20 20:27 rostring
+
+/var/folders/qn/_7p5h3wd28q6kyf265vl0p9h0000gq/T/tmpoKcz0T/user/ft_split:
+total 8
+-rw-r--r--  1 deepthought  deepthought  2211 Nov 20 20:27 ft_split.c
+
+/var/folders/qn/_7p5h3wd28q6kyf265vl0p9h0000gq/T/tmpoKcz0T/user/hidenp:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1359 Nov 20 20:27 hidenp.c
+
+/var/folders/qn/_7p5h3wd28q6kyf265vl0p9h0000gq/T/tmpoKcz0T/user/rostring:
+total 8
+-rw-r--r--  1 deepthought  deepthought  2557 Nov 20 20:27 rostring.c
+ 
+= ft_split =====================================================================
+$> clang -Wextra -Wall -Werror ft_split.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./i66ysf7lnttforq4ysgryil6 ""
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./g123bfr70amqqav6ovuegpx7 "
+
+	 "
+$> diff -U 3 user_output_test2 test2.output | cat -e
+--- user_output_test2	2017-11-20 20:27:35.000000000 +0100$
++++ test2.output	2017-11-20 20:27:35.000000000 +0100$
+@@ -1,3 +0,0 @@$
+-$
+-$
+-$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================
