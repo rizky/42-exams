@@ -6,7 +6,7 @@
 /*   By: rnugroho <rnugroho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 16:33:18 by rnugroho          #+#    #+#             */
-/*   Updated: 2018/02/19 17:32:14 by rnugroho         ###   ########.fr       */
+/*   Updated: 2018/02/19 19:32:39 by rnugroho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int		is_operator(char *c)
 		return (0);
 }
 
-int		rpn_calc(char *str)
+int		rpn_calc(char *str, int *result)
 {
 	char	*ptr;
 	int		*tab;
@@ -63,10 +63,10 @@ int		rpn_calc(char *str)
 		if (is_operator(ptr))
 		{
 			if ((i - 1) < 0)
-				return (-99997);
+				return (-1);
 			if (*ptr == '/' || *ptr == '%')
 				if (tab[i] == 0)
-					return (-99997);
+					return (-1);
 			if (*ptr == '+')
 				tab[i - 1] = tab[i - 1] + tab[i];
 			if (*ptr == '-')
@@ -81,8 +81,9 @@ int		rpn_calc(char *str)
 		}
 		ptr++;
 	}
+	*result = tab[0];
 	if (i != 0)
-		return (-99997);
+		return (-1);
 	else
-		return (tab[0]);
+		return (1);
 }
