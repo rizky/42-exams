@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rpn_calc.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rnugroho <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rnugroho <rnugroho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 16:33:18 by rnugroho          #+#    #+#             */
-/*   Updated: 2018/02/19 17:25:55 by rnugroho         ###   ########.fr       */
+/*   Updated: 2018/02/19 17:32:14 by rnugroho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,9 @@ int		rpn_calc(char *str)
 		{
 			if ((i - 1) < 0)
 				return (-99997);
+			if (*ptr == '/' || *ptr == '%')
+				if (tab[i] == 0)
+					return (-99997);
 			if (*ptr == '+')
 				tab[i - 1] = tab[i - 1] + tab[i];
 			if (*ptr == '-')
